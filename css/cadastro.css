@@ -1,0 +1,53 @@
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color:  #53c794;
+}
+
+.card {
+    display: flex;
+    width: 30%;
+    height: 70%;
+    background: white;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h1 {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    color: #252525;
+}
+
+.card input {
+    border: 1px solid #ccc;
+    padding-left: 8px;
+}
+
+.card input, button {
+    display: block;
+    width: 80%;
+    height: 40px;
+    border-radius: 4px;
+    margin: 16px auto 0px;
+}
+
+.card button {
+    background-color: #53c794;
+    color: #ffffff;
+    border: 0;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.card a {
+    display: block;
+    width: 80%;
+    margin: 8px auto 0px;
+    font-size: 14px;
+} 
