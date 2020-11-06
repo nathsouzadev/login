@@ -7,13 +7,16 @@
         $sql = "select * from usuarios where email = '$email' and senha = '$password';";
         $result = $conn->query($sql);
         $user = mysqli_fetch_all($result);
-        if (count($user) < 3){
+        //print_r($user[0]);
+        if (count($user[0]) < 3){
             echo "<script>alert('Senha e/ou e-mail inválido')
                     location.href='index.php'</script>";
         } else {
+            $_SESSION['id_user'] = $user[0][0];
             $_SESSION['nome'] = $user[0][1];
             $_SESSION['senha'] = $user[0][2];
-            $_SESSION['email'] = $user[0][3];       
+            $_SESSION['email'] = $user[0][3];
+            $_SESSION['image'] = $user[0][4];       
             header('Location: home.php');
         }
     }

@@ -1,6 +1,6 @@
 <?php
     require_once('conection.php');
-    $dados = [$_POST['nome'], $_POST['email'], $_POST['password1'], $_POST['password2']];
+    $dados = [$_POST['nome'], $_POST['email'], $_POST['password1'], $_POST['password2'], $_POST['image']];
     if (strlen($dados[0]) < 3) { //name min three chars
         echo"<script>alert('Nome deve conter no mínimo três caracteres')</script>";
     } else if (strlen($dados[2]) < 6){ //password min six chars
@@ -23,11 +23,12 @@
                 $usuario = $_POST['nome'];
                 $email = $_POST['email'];
                 $senha = md5($_POST['password1']);
+                $image = $_POST['image'];
 
-                $sql = "insert into usuarios (usuario, senha, email) values ('$usuario', '$senha', '$email')";
+                $sql = "insert into usuarios (usuario, senha, email, image) values ('$usuario', '$senha', '$email', '$image')";
                 $result = $conn->query($sql);
                 echo"<script>alert('Dados cadastrados')</script>";
-                header('Location: index.php');        
+                echo"<script>location.href = 'index.php'</script>";
             } else {
                 echo"<script>alert('E-mail já cadastrado')</script>";
             }

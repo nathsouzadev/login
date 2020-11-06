@@ -60,3 +60,13 @@ main {
 .painel-img img {
     height: 80%;
 }
+
+@media(max-width: 960px) {
+    .painel-login {
+        width: 100%;
+    }
+    
+    .painel-img {
+        display: none;
+    }
+}

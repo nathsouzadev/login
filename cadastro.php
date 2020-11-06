@@ -17,6 +17,7 @@
                 <h1>Cadastre-se</h1>
                 <input type="text" id="name" name="nome" placeholder="Digite seu nome" required>
                 <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                <input type="url" id="email" name="image" placeholder="Insira a URL da imagem">
                 <input type="password" id="password" name="password1" placeholder="Digite uma senha" required>
                 <input type="password" id="password" name="password2" placeholder="Confrime sua senha" required>
                 <button id="submit" type="submit">Cadastre-se</button>
