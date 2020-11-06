@@ -8,7 +8,7 @@
         $result = $conn->query($sql);
         $user = mysqli_fetch_all($result);
         //print_r($user[0]);
-        if (count($user[0]) < 3){
+        if ($result->num_rows == 0){
             echo "<script>alert('Senha e/ou e-mail inválido')
                     location.href='index.php'</script>";
         } else {
